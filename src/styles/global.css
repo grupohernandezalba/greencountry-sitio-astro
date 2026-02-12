@@ -19,3 +19,6 @@ h1, h2, h3 {
     font-style: normal;
 }
 
+.crece {
+    @apply hover:scale-105 transition-transform duration-300 inline-block;
+}

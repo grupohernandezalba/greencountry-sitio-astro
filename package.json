@@ -13,6 +13,7 @@
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "aos": "^2.3.4",
     "astro": "^5.17.1",
     "flowbite": "^4.0.1",
     "flowbite-react": "^0.12.17",
@@ -22,6 +23,7 @@
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^25.2.3"
   }
 }
