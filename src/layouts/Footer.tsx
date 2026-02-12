@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300 mt-20">
+    <footer className="bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 mt-20">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
         {/* Grid */}
@@ -46,32 +46,27 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Columna 3 - Redes Sociales */}
+          {/* Columna 3 - Redes Sociales iconos svg obtenidos de https://simpleicons.org/ */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-green-700 dark:text-green-400">
-              Síguenos
+              Follow Us
             </h3>
             <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="#"
+                <a
+                href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
                 className="hover:text-green-600 transition"
                 aria-label="Facebook"
-              >
-                Facebook
-              </a>
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                <img src="/icons/facebook.svg" className="w-6 h-6" />
+                </a>
               <a
                 href="#"
                 className="hover:text-green-600 transition"
                 aria-label="Instagram"
               >
-                Instagram
-              </a>
-              <a
-                href="#"
-                className="hover:text-green-600 transition"
-                aria-label="LinkedIn"
-              >
-                LinkedIn
+                <img src="/icons/instagram.svg" className="w-6 h-6" />
               </a>
             </div>
           </div>

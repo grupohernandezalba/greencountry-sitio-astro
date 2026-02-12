@@ -17,7 +17,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 dark:bg-gray-900">
+    <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50 dark:bg-neutral-800">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-900 shadow-md">
+        <div className="md:hidden bg-white dark:bg-neutral-800 shadow-md">
           <ul className="flex flex-col items-center py-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.label}>
