@@ -15,7 +15,7 @@ const Contenido2: React.FC<Contenido2Props> = ({ title, subtitle, contenido, ima
 				<img 
 					src={`/img/${image}`} 
 					alt="Green Country services" 
-					className="w-3/4 mx-auto rounded shadow"
+					className="w-full md:w-3/4 md:mx-auto rounded shadow"
 				/>
 			</div>
 			<div className="flex flex-col justify-center" data-aos="fade-up">

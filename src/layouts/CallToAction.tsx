@@ -3,7 +3,7 @@ import React from "react";
 const CallToAction: React.FC = () => {
 
   return (
-    <section className="bg-gradient-to-r from-green-700 via-green-600 to-green-500 py-16 px-6">
+    <section className="bg-gradient-to-r from-green-900 via-green-600 to-green-900 py-16 px-6" data-aos="fade-up">
 		<div className="max-w-4xl mx-auto text-center">
 			
 			<h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -17,7 +17,7 @@ const CallToAction: React.FC = () => {
 
 			<a 
 			href="tel:+12081234567"
-			className="crece inline-block bg-white text-green-700 font-semibold text-lg px-8 py-4 rounded-4xl shadow-lg hover:bg-gray-100 transition duration-300"
+			className="crece inline-block bg-white text-stone-800 font-semibold text-lg px-8 py-4 rounded-4xl shadow-lg hover:bg-gray-100 transition duration-300"
 			>
 			Get a free quote — Call Now!
 			</a>

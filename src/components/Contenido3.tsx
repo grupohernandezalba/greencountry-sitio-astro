@@ -26,7 +26,7 @@ const Contenido3: React.FC<Contenido3Props> = ({ title, subtitle, contenido, ima
 				<img 
 					src={`/img/${image}`} 
 					alt="Green Country services" 
-					className="w-3/4 mx-auto rounded shadow"
+					className="w-full md:w-3/4 md:mx-auto rounded shadow"
 				/>
 			</div>
         </div>
