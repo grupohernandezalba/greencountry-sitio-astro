@@ -2,20 +2,96 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../layouts/Navbar.tsx";
 import Footer from "../layouts/Footer.tsx";
+import Banner from "../components/Banner.tsx";
+import HeroImage from "../components/HeroImage.tsx";
+
 ---
 
 <MainLayout>
   <Navbar client:load />
-    <div class="w-full h-screen">
-      <img 
-        src="/banner-about.jpg" 
-        alt="About banner" 
-        class="w-full h-full object-cover"
-      />
-    </div>
-    <h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
-      About
-    </h1>
+      <Banner title="About us" image="landscapingservices1-idaho-greencountry.webp" />
+
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="flex flex-col justify-center" data-aos="fade-up">
+            <h1 class="text-4xl font-bold text-stone-800">
+              About us
+            </h1>
+            <h2 class="text-2xl font-bold text-stone-800 mb-4">
+                Our Commitment
+            </h2>
+            <p class="text-stone-700 leading-relaxed">
+              <strong>Green Country Landscaping Services LLC</strong> is committed to delivering high-quality landscaping solutions with professionalism, reliability, and attention to detail. Proudly serving Idaho, including the Nampa area, we specialize in Landscape and Hardscape design, comprehensive Lawn Care services, and premium Nursery products. Our team is dedicated to enhancing outdoor spaces with craftsmanship, sustainable practices, and a strong commitment to customer satisfaction. Whether it’s maintaining a beautiful lawn or creating a complete outdoor transformation, we work with integrity and excellence in every project.
+            </p>
+            <div class="mt-6">
+              <audio controls class="w-1/2 mx-auto">
+                <source src="/audio/audio-greencountry.mp3" type="audio/mpeg" />
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <img 
+              src="/img/logo3d-greencountry.webp" 
+              alt="Green Country services" 
+              class="w-full"
+            />
+          </div>
+        </div>
+      </div>
+
+      <HeroImage text="Trusted Professional Landscaping Services in Idaho" image="aboutus1-greencountry.webp" />
+
+      <div class="container mx-auto px-4 py-16">
+        <h2 class="text-4xl font-bold text-stone-800 text-center mb-12">Mission, Vision and Values</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3">
+			<div class="bg-stone-100 mx-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up">
+				<lord-icon
+					src="https://cdn.lordicon.com/jeqofpxi.json"
+					trigger="loop"
+					stroke="light"
+					colors="primary:#285d32,secondary:#15803d"
+					style="width:200px;height:200px; display:block; margin: 0 auto;">
+				</lord-icon>
+				<h3 class="text-center text-2xl font-bold text-stone-800 mb-4">Mission</h3>
+				<p class="text-stone-700 leading-relaxed">
+				To provide high-quality landscaping services that exceed our customers' expectations, transforming outdoor spaces into beautiful and functional environments. We are committed to using sustainable practices and innovative techniques to create gardens and green areas that improve the quality of life in the communities we serve.
+				</p>
+			</div>
+
+			<div class="bg-stone-100 mx-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="200">
+				<lord-icon
+					src="https://cdn.lordicon.com/stqpqzpu.json"
+					trigger="loop"
+					stroke="light"
+					colors="primary:#285d32,secondary:#15803d"
+					style="width:200px;height:200px; display:block; margin: 0 auto;">
+				</lord-icon>
+				<h3 class="text-center text-2xl font-bold text-stone-800 mb-4">Vision</h3>
+				<p class="text-stone-700 leading-relaxed">
+				To be the leading landscaping company in Idaho, recognized for our excellence, innovation, and commitment to environmental sustainability. We aspire to be the trusted partner for residents and businesses seeking to transform their outdoor spaces into oases of beauty and tranquility.
+				</p>
+			</div>
+
+			<div class="bg-stone-100 mx-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="400">
+				<lord-icon
+					src="https://cdn.lordicon.com/vmzmljdv.json"
+					trigger="loop"
+					stroke="light"
+					colors="primary:#285d32,secondary:#15803d"
+					style="width:200px;height:200px; display:block; margin: 0 auto;">
+				</lord-icon>
+				<h3 class="text-center text-2xl font-bold text-stone-800 mb-4">Values</h3>
+				<p class="text-stone-700 leading-relaxed">
+				Integrity, professionalism, and excellence guide every project we undertake. We value honesty in our relationships with clients, respect for the environment through eco-friendly practices, dedication to detail in every job, and social responsibility toward our communities.
+				</p>
+			</div>
+        </div>
+      </div>
+
+      <HeroImage text="Where quality landscaping meets lasting beauty" image="aboutus2-greencountry.webp" />
+
 
   <Footer client:load />
 </MainLayout>

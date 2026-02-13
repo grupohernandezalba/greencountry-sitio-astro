@@ -2,10 +2,12 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../layouts/Navbar.tsx";
 import Footer from "../layouts/Footer.tsx";
+import Banner from "../components/Banner.tsx";
 ---
 
 <MainLayout>
   <Navbar client:load />
+  <Banner title="Contact us" image="landscapingservices1-idaho-greencountry.webp" />
 
   <h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
     Contact

@@ -2,14 +2,14 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../layouts/Navbar.tsx";
 import Footer from "../layouts/Footer.tsx";
+import Banner from "../components/Banner.tsx";
 ---
 
 <MainLayout>
-  <Navbar client:load />
-
-  <h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
-    Terms and conditions
-  </h1>
-
-  <Footer client:load />
+	<Navbar client:load />
+		<Banner title="Terms and Conditions" image="landscapingservices1-idaho-greencountry.webp" />
+		<h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
+			Terms and conditions
+		</h1>
+	<Footer client:load />
 </MainLayout>
