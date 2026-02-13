@@ -9,7 +9,7 @@ interface Contenido2Props {
 
 const Contenido2: React.FC<Contenido2Props> = ({ title, subtitle, contenido, image }) => {
   return (
-    <div className="container bg-white mx-auto px-4 py-12">
+    <div className="container bg-white mx-auto px-4 py-4 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 			<div data-aos="fade-up" data-aos-delay="300">
 				<img 
