@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 mt-20" data-aos="fade-in">
+    <footer className="bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300" data-aos="fade-in">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
         {/* Grid */}
