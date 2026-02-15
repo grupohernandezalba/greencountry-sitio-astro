@@ -28,7 +28,7 @@ const Contenido4: React.FC<Contenido4Props> = ({ title, subtitle, contenido, ima
 				</h4>
 				<ul className="text-stone-700 leading-relaxed">
 					{contenido.map((item, index) => (
-						<li key={index} className="block mb-2"><Check className="inline mr-2 text-green-600" /> {item}</li>
+						<li><Check className="inline text-green-600" /> <span className="text-sm md:text-base">{item}</span></li>
 					))}
 				</ul>
 			</div>

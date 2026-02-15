@@ -12,15 +12,28 @@ import CallToAction from "../layouts/CallToAction.tsx";
 
 
 const contenidoChoose = [
-	"Committed to delivering exceptional outdoor solutions with precision",
+	"Committed to delivering exceptional outdoors",
 	"Serving Idaho, including the Nampa area",
-	"Our experienced team combines creativity and technical expertise",
+	"Our experienced team combines creativity and expertise",
 	"From landscape and hardscape installations",
 	"Professional lawn care and nursery products",
 	"We focus on detail, durability, and customer satisfaction",
 	"You choose reliability and transparency in every project",
 	"Team dedicated to exceeding your expectations"
-]
+];
+
+const contenidoServing = [
+	"Caldwell, ID",
+	"Nampa, ID",
+	"Meridian, ID",
+	"Boise, ID",
+	"Eagle, ID",
+	"Middleton, ID",
+	"Star, ID",
+	"Kuna, ID",
+	"Wilder, ID",
+	"Marsing, ID"
+];
 
 ---
 
@@ -105,13 +118,22 @@ const contenidoChoose = [
 			image = "aboutus3-greencountry.webp"
 		/>
 
-		<HeroImage text="Proudly serving Caldwell, Nampa, Meridian, Boise, Eagle, Middleton, Star, Kuna, Wilder, and Marsing, Idaho" image="aboutus5-greencountry.webp" />
+		<HeroImage text="High-quality materials and sustainable practices" image="aboutus5-greencountry.webp" />
 
 		<Contenido3
 			title="Meet Elias Rodriguez"
 			subtitle="Owner & Founder of Green Country"
 			contenido="With over 20 years of hands-on experience in the landscaping industry, Elias Rodriguez has built Green Country on a foundation of quality, integrity, and dedication. His passion for creating beautiful and functional outdoor spaces has helped homeowners and businesses across Idaho, including the Nampa area, transform their landscapes with confidence. Elias combines practical expertise, strong work ethic, and a commitment to excellence to ensure every project reflects the highest standards of craftsmanship and customer satisfaction. Under his leadership, Green Country continues to grow with the same values it was founded on — reliability, professionalism, and lasting results."
 			image="aboutus4-greencountry.webp"
+		/>
+
+		<HeroImage text="Commitment to customer satisfaction and long-term results" image="aboutus6-greencountry.webp" />
+
+		<Contenido4
+			title = "Proudly serving Idaho"
+			subtitle = "including the Nampa area"
+			contenido = { contenidoServing }
+			image = "aboutus7-greencountry.webp"
 		/>
 
 	  <CallToAction />
