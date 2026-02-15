@@ -22,3 +22,7 @@ h1, h2, h3 {
 .crece {
     @apply hover:scale-105 transition-transform duration-300 inline-block;
 }
+
+.boton {
+    @apply px-4 py-2 bg-green-900 text-white rounded-4xl hover:bg-green-600 transition;
+}

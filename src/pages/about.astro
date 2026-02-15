@@ -7,16 +7,29 @@ import HeroImage from "../components/HeroImage.tsx";
 import Contenido1 from "../components/Contenido1.tsx";
 import Contenido2 from "../components/Contenido2.tsx";
 import Contenido3 from "../components/Contenido3.tsx";
+import Contenido4 from "../components/Contenido4.tsx";
 import CallToAction from "../layouts/CallToAction.tsx";
+
+
+const contenidoChoose = [
+	"Committed to delivering exceptional outdoor solutions with precision",
+	"Serving Idaho, including the Nampa area",
+	"Our experienced team combines creativity and technical expertise",
+	"From landscape and hardscape installations",
+	"Professional lawn care and nursery products",
+	"We focus on detail, durability, and customer satisfaction",
+	"You choose reliability and transparency in every project",
+	"Team dedicated to exceeding your expectations"
+]
 
 ---
 
 <MainLayout>
   <Navbar client:load />
-      <Banner title="About us" image="landscapingservices1-idaho-greencountry.webp" />
+      <Banner title="About Us" image="landscapingservices1-idaho-greencountry.webp" />
 
 	  <Contenido1 
-		title="About us"
+		title="Our company"
 		subtitle="Our Commitment"
 		contenido="Green Country Landscaping Services LLC is committed to delivering high-quality landscaping solutions with professionalism, reliability, and attention to detail. Proudly serving Idaho, including the Nampa area, we specialize in Landscape and Hardscape design, comprehensive Lawn Care services, and premium Nursery products. Our team is dedicated to enhancing outdoor spaces with craftsmanship, sustainable practices, and a strong commitment to customer satisfaction. Whether it’s maintaining a beautiful lawn or creating a complete outdoor transformation, we work with integrity and excellence in every project."
 		image="logo3d-greencountry.webp"
@@ -39,7 +52,7 @@ import CallToAction from "../layouts/CallToAction.tsx";
         <h2 class="text-2xl md:text-3xl font-bold text-stone-800 text-center mb-12">Mission, Vision and Values</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 mx-8">
-			<div class="bg-white md:m-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up">
+			<div class="bg-white md:m-4 p-8 mb-4 rounded-lg border border-stone-200" data-aos="fade-up">
 				<lord-icon
 					src="https://cdn.lordicon.com/jeqofpxi.json"
 					trigger="loop"
@@ -53,7 +66,7 @@ import CallToAction from "../layouts/CallToAction.tsx";
 				</p>
 			</div>
 
-			<div class="bg-white md:m-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="200">
+			<div class="bg-white md:m-4 p-8 mb-4 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="200">
 				<lord-icon
 					src="https://cdn.lordicon.com/stqpqzpu.json"
 					trigger="loop"
@@ -67,7 +80,7 @@ import CallToAction from "../layouts/CallToAction.tsx";
 				</p>
 			</div>
 
-			<div class="bg-white md:m-4 p-8 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="400">
+			<div class="bg-white md:m-4 p-8 mb-4 rounded-lg border border-stone-200" data-aos="fade-up" data-aos-delay="400">
 				<lord-icon
 					src="https://cdn.lordicon.com/vmzmljdv.json"
 					trigger="loop"
@@ -85,11 +98,11 @@ import CallToAction from "../layouts/CallToAction.tsx";
 
 		<HeroImage text="Where quality landscaping meets lasting beauty" image="aboutus2-greencountry.webp" />
 
-		<Contenido2
-			title="Why choose Green Country"
-			subtitle="Quality craftsmanship, reliable service."
-			contenido="At Green Country Landscaping Services LLC, we are committed to delivering exceptional outdoor solutions with precision, care, and integrity. Serving Idaho, including the Nampa area, our experienced team combines creativity, technical expertise, and high-quality materials to bring every project to life. From landscape and hardscape installations to professional lawn care and nursery products, we focus on detail, durability, and customer satisfaction. When you choose us, you choose reliability, transparency, and a team dedicated to exceeding your expectations."
-			image="aboutus3-greencountry.webp"
+		<Contenido4
+			title = "Why choose Green Country"
+			subtitle = "Quality and reliable services."
+			contenido = { contenidoChoose }
+			image = "aboutus3-greencountry.webp"
 		/>
 
 		<HeroImage text="Proudly serving Caldwell, Nampa, Meridian, Boise, Eagle, Middleton, Star, Kuna, Wilder, and Marsing, Idaho" image="aboutus5-greencountry.webp" />

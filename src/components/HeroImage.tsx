@@ -8,7 +8,7 @@ interface HeroImageProps {
 const HeroImage: React.FC<HeroImageProps> = ({ text, image }) => {
   return (
     <div
-        className="w-full mt-25 md:mt-0 bg-center bg-cover flex items-center justify-center"
+        className="w-full mt-0 bg-center bg-cover flex items-center justify-center"
         style={{ backgroundImage: `url('/img/${image}')`, minHeight: '400px' }}
         data-aos="fade-up"
       >

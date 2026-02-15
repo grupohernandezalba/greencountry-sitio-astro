@@ -7,13 +7,16 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ title, image }) => {
   return (
-    <div className="w-full mt-25 md:mt-0" data-aos="fade-down">
-        <img 
-          src={`/img/${image}`}
-          alt={title} 
-          className="w-full h-full object-cover"
-        />
+    <div
+      className="w-full h-full object-cover mt-25 bg-center flex items-center justify-center"
+      style={{ backgroundImage: `url('/img/${image}')`, minHeight: '200px', maxHeight: '200px' }}
+      data-aos="fade-down"
+      >
+      <h1 className="text-white shadow text-3xl md:text-4xl font-bold text-center" data-aos="fade-in" data-aos-delay="500">
+        {title}
+      </h1>
     </div>
+    
   );
 };
 

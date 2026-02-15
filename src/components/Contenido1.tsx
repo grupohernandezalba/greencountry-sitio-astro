@@ -12,12 +12,12 @@ const Contenido1: React.FC<Contenido1Props> = ({ title, subtitle, contenido, ima
     <div className="container bg-white mx-auto px-4 pt-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col justify-center" data-aos="fade-up">
-            <h1 className="text-4xl font-bold text-stone-800">
+            <h2 className="text-4xl font-bold text-stone-800">
               {title}
-            </h1>
-            <h2 className="text-2xl font-bold text-stone-800 mb-4">
-                {subtitle}
             </h2>
+            <h3 className="text-2xl font-bold text-stone-800 mb-4">
+                {subtitle}
+            </h3>
             <p className="text-stone-700 leading-relaxed">
                 {contenido}
             </p>

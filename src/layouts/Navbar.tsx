@@ -7,7 +7,7 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About Us", href: "/about" },
+  { label: "About us", href: "/about" },
   { label: "Services", href: "/services" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         
         {/* Logo */}
         <a href="/" className="text-2xl font-bold text-green-700 dark:text-green-400">
-          <img className="w-48 crece" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
+          <img className="w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
         </a>
 
         {/* Desktop Menu */}
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             </li>
           ))}
           <li>
-            <a href="tel:+12084777960" className="crece px-4 py-2 bg-green-600 text-white rounded-4xl hover:bg-green-700 transition" data-aos="zoom-in">
+            <a href="tel:+12084777960" className="boton crece" data-aos="zoom-in">
               Call Now! 208-477-7960 
             </a>
           </li>

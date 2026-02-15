@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           
           {/* Columna 1 - Address */}
           <div className="fade-up delay-100" data-aos="fade-up">
-            <h3 className="text-lg font-semibold mb-4 text-green-700 dark:text-green-400">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
               <MapPin className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Address
             </h3>
             <address className="not-italic">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 
           {/* Columna 2 - Privacy Policy */}
           <div data-aos="fade-up" data-aos-delay="300">
-            <h3 className="text-lg font-semibold mb-4 text-green-700 dark:text-green-400">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
               <Lock className="w-5 h-5 inline-flex items-center gap-2"strokeWidth={3} /> Legal
             </h3>
             <ul className="space-y-2">
@@ -69,13 +69,13 @@ const Footer: React.FC = () => {
 
           {/* Columna 3 - Redes Sociales iconos svg obtenidos de https://simpleicons.org/ */}
           <div data-aos="fade-up" data-aos-delay="500">
-            <h3 className="text-lg font-semibold mb-4 text-green-700 dark:text-green-400">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
               <ThumbsUp className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Follow Us
             </h3>
             <div className="flex justify-center md:justify-start space-x-4">
                 <a
                 href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
-                className="hover:text-green-600 transition"
+                className="text-green-900"
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
                 </a>
               <a
                 href="#"
-                className="hover:text-green-600 transition"
+                className="text-green-900"
                 aria-label="Instagram"
               >
                 <img src="/icons/instagram.svg" className="w-6 h-6 crece" />
