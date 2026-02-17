@@ -4,7 +4,7 @@ export default function HomeCarousel() {
 const slides = [
 	{
 		image: "/img/slider1-greencountry.webp",
-		title: "Trusted landscaping services in Idaho",
+		title: "Trusted landscaping services",
 		subtitle: "Expert landscaping solutions",
 		link: "/about"
 	},
@@ -16,7 +16,7 @@ const slides = [
 	},
 	{
 		image: "/img/slider3-greencountry.webp",
-		title: "Nursery products in Idaho",
+		title: "Nursery products",
 		subtitle: "High-quality plants and trees",
 		link: "/nursery"
 	}

@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
   }, []);
 
   return (
-    <footer className="bg-gray-200 dark:bg-neutral-800 text-gray-700 dark:text-gray-300" data-aos="fade-in">
+    <footer className="bg-gray-200  text-gray-700 " data-aos="fade-in">
       <div className="max-w-7xl mx-auto px-6 py-12">
         
         {/* Grid */}
@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
           
           {/* Columna 1 - Address */}
           <div className="fade-up delay-100" data-aos="fade-up">
-            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 ">
               <MapPin className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Address
             </h3>
             <address className="not-italic">
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
 
           {/* Columna 2 - Privacy Policy */}
           <div data-aos="fade-up" data-aos-delay="300">
-            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 ">
               <Lock className="w-5 h-5 inline-flex items-center gap-2"strokeWidth={3} /> Legal
             </h3>
             <ul className="space-y-2">
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
 
           {/* Columna 3 - Redes Sociales iconos svg obtenidos de https://simpleicons.org/ */}
           <div data-aos="fade-up" data-aos-delay="500">
-            <h3 className="text-lg font-semibold mb-4 text-green-900 dark:text-green-800">
+            <h3 className="text-lg font-semibold mb-4 text-green-900 ">
               <ThumbsUp className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Follow Us
             </h3>
             <div className="flex justify-center md:justify-start space-x-4">
@@ -106,8 +106,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Línea inferior */}
-        <div className="border-t border-gray-300 dark:border-gray-700 mt-10 pt-6 text-center text-sm">
-          © {new Date().getFullYear()} Green Country Landscaping services LLC. All rights reserved. <a href="https://gha.mx" target="_blank" rel="noopener noreferrer" className="crece text-green-700 dark:text-green-400">Website by GHA.</a>
+        <div className="border-t border-gray-300  mt-10 pt-6 text-center text-sm">
+          © {new Date().getFullYear()} Green Country Landscaping services LLC. All rights reserved. <a href="https://gha.mx" target="_blank" rel="noopener noreferrer" className="crece text-green-700 ">Website by GHA.</a>
         </div>
 
       </div>
