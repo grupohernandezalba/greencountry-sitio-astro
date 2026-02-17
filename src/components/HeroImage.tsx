@@ -12,7 +12,7 @@ const HeroImage: React.FC<HeroImageProps> = ({ text, image }) => {
         style={{ backgroundImage: `url('/img/${image}')`, minHeight: '400px' }}
         data-aos="fade-up"
       >
-        <h2 className="text-white shadow text-3xl md:text-4xl font-bold text-center" data-aos="fade-in" data-aos-delay="500">
+        <h2 className="text-white text-shadow-lg text-3xl md:text-4xl font-bold text-center" data-aos="fade-in" data-aos-delay="500">
           { text }
         </h2>
     </div>

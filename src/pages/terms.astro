@@ -3,13 +3,99 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../layouts/Navbar.tsx";
 import Footer from "../layouts/Footer.tsx";
 import Banner from "../components/Banner.tsx";
+import Texto from "../components/Texto.tsx";
+
 ---
 
 <MainLayout>
 	<Navbar client:load />
-		<Banner title="Terms and Conditions" image="landscapingservices1-idaho-greencountry.webp" />
-		<h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
-			Terms and conditions
-		</h1>
-	<Footer client:load />
+		<Banner title="Terms and Conditions" image="landscapingservices2-idaho-greencountry.webp" />
+
+		<Texto 
+			title="1. Acceptance of terms: " 
+			contenido='By accessing or using the website, services, or requesting a quote from Green Country Landscape Services LLC (“Company,” “we,” “our,” or “us”), you agree to be bound by these Terms and Conditions and all applicable federal, state, and local laws of the United States. If you do not agree with these terms, please do not use our services or website.' 
+		/>
+
+		<Texto 
+			title="2. Services provided" 
+			contenido='Green Country Landscape Services LLC provides landscaping services, including but not limited to:
+						Landscape design and installation,
+						Tree planting and nursery services,
+						Irrigation installation and repair,
+						Lawn care and maintenance,
+						Hardscape and outdoor improvements,
+						All services are subject to availability and written agreement.' 
+		/>
+
+		<Texto 
+			title="3. Estimates and payments" 
+			contenido='All quotes and estimates are provided free of charge unless otherwise stated.
+					Estimates are valid for 30 days unless otherwise specified in writing.
+					A deposit may be required prior to the start of work.
+					Final payment is due upon completion of services unless otherwise agreed in writing.
+					Late payments may be subject to interest charges as permitted under applicable U.S. and Idaho law.' 
+		/>
+
+		<Texto 
+			title="4. Cancellations and refunds" 
+			contenido='Customers must provide written notice for cancellations.
+					Deposits may be non-refundable if materials have been ordered or labor has been scheduled.
+					Refunds, if applicable, will be processed within a reasonable timeframe.' 
+		/>
+
+		<Texto 
+			title="5. Warranties and disclaimers" 
+			contenido='Plant material warranties, if offered, will be specified in writing.
+					The Company does not guarantee plant survival due to improper care, extreme weather, natural disasters, pests, or failure of irrigation systems not installed or maintained by the Company.
+					Except as expressly stated, services are provided “as is” without additional warranties to the fullest extent permitted by U.S. law.' 
+		/>
+
+		<Texto 
+			title="6. Limitation of liability" 
+			contenido='To the maximum extent permitted under applicable U.S. law:
+					Green Country Landscape Services LLC shall not be liable for indirect, incidental, special, or consequential damages.
+					Total liability shall not exceed the amount paid for the specific service giving rise to the claim.' 
+		/>
+
+		<Texto 
+			title="7. Property access" 
+			contenido='Customers agree to provide reasonable access to the property where services will be performed.
+					The Company is not responsible for delays caused by restricted access, unsafe conditions, or undisclosed underground utilities.' 
+		/>
+
+		<Texto 
+			title="8. Compliance with Laws" 
+			contenido='The Company complies with all applicable federal, state, and local regulations.
+					Customers are responsible for obtaining any required HOA approvals, permits, or permissions unless otherwise agreed in writing.' 
+		/>
+
+		<Texto 
+			title="9. Intellectual property" 
+			contenido='All content on the Company website, including logos, text, images, and branding, is the property of Green Country Landscape Services LLC and may not be reproduced without written consent.' 
+		/>
+
+		<Texto 
+			title="10. Governing Law" 
+			contenido='These Terms shall be governed and interpreted under the laws of the United States and the State of Idaho, without regard to conflict of law principles.
+					Any disputes shall be resolved in the appropriate courts located in Idaho.' 
+		/>
+
+		<Texto 
+			title="11. Changes to terms" 
+			contenido='We reserve the right to update or modify these Terms at any time. Updates will be posted on our website with a revised effective date.' 
+		/>
+
+		<Texto
+			title="12. Contact Information" 
+			contenido='For questions or concerns regarding these Terms, please contact us at:
+					Email: info@greencountryls.com
+					Phone: +1 (208) 477-7960
+					Address: 18497 Midland Blvd, Nampa, Idaho, United States, ZIP 83687.' 
+		/>
+
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+  <Footer client:load />
 </MainLayout>

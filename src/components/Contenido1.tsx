@@ -25,8 +25,8 @@ const Contenido1: React.FC<Contenido1Props> = ({ title, subtitle, contenido, ima
           <div data-aos="fade-up" data-aos-delay="300">
             <img 
               src={`/img/${image}`} 
-              alt="Green Country services" 
-              className="w-full"
+              alt="Green Country Landscaping Services LLC" 
+              className="w-full rounded mx-auto"
             />
           </div>
         </div>

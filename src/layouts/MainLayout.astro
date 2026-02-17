@@ -47,10 +47,32 @@ import "../styles/global.css";
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;800&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
 
+     <!-- GLightbox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+
   </head>
   <body>
     <slot />
     <!-- LordIcon Library -->
     <script src="https://cdn.lordicon.com/lordicon.js"></script>
+
+    <!-- GLightbox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <script>
+      declare var GLightbox: any;
+      document.addEventListener("DOMContentLoaded", function () {
+        const lightbox = GLightbox({
+          selector: ".glightbox",
+          touchNavigation: true,
+          loop: true,
+          zoomable: true
+        });
+      });
+    </script>
+
   </body>
 </html>

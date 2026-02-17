@@ -3,15 +3,97 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Navbar from "../layouts/Navbar.tsx";
 import Footer from "../layouts/Footer.tsx";
 import Banner from "../components/Banner.tsx";
+import Texto from "../components/Texto.tsx";
 ---
 
 <MainLayout>
 	<Navbar client:load />
-		<Banner title="Privacy Policy" image="landscapingservices1-idaho-greencountry.webp" />
+		<Banner title="Privacy Policy" image="landscapingservices2-idaho-greencountry.webp" />
 
-		<h1 class="text-4xl font-bold text-center mt-40 text-stone-800">
-			Privacy policy
-		</h1>
+		<Texto 
+			title="1. Introduction" 
+			contenido='Green Country Landscape Services LLC (“Company,” “we,” “our,” or “us”) respects your privacy and is committed to protecting the personal information you provide when using our website or services.
+					This Privacy Policy explains how we collect, use, disclose, and safeguard your information in accordance with applicable United States laws.' 
+		/>
 
-	<Footer client:load />
+		<Texto 
+			title="2. Information we collect" 
+			contenido='We may collect the following types of information:
+				Personal Information,
+				Name,
+				Email address,
+				Phone number,
+				Property address,
+				Information submitted through contact or quote request forms.
+			' 
+		/>
+
+		<Texto 
+			title="3. How we use your information" 
+			contenido='We use the information we collect to:
+					Respond to inquiries and provide quotes,
+					Schedule and deliver services,
+					Communicate regarding appointments or service updates,
+					Improve our website and customer experience,
+					Comply with legal obligations,
+					We do not sell your personal information.' 
+		/>
+
+		<Texto 
+			title="4. Cookies and tracking technologies" 
+			contenido='Our website may use cookies and similar technologies to enhance user experience and analyze website traffic.
+					You may disable cookies through your browser settings; however, some features of the website may not function properly.' 
+		/>
+
+		<Texto 
+			title="5. Sharing of Information" 
+			contenido='We may share your information only in the following situations:
+				With service providers assisting in business operations (such as hosting providers or email services),
+				If required by law or legal process,
+				To protect the rights, safety, and property of the Company,
+				We do not sell or rent personal data to third parties.' 
+		/>
+
+		<Texto 
+			title="6. Data security" 
+			contenido='We implement reasonable administrative and technical safeguards to protect your information. However, no method of transmission over the internet is 100% secure.' 
+		/>
+
+		<Texto 
+			title="7. Your privacy rights" 
+			contenido='Depending on your state of residence, you may have rights under applicable privacy laws, including:
+			the right to request access to personal information,
+			the right to request correction or deletion,
+			the right to opt out of certain data uses,
+			to exercise these rights, please contact us using the information below.' 
+		/>
+
+		<Texto 
+			title="8. Third-party links" 
+			contenido='Our website may contain links to third-party websites (such as Facebook or Google). We are not responsible for the privacy practices of those external websites.' 
+		/>
+
+		<Texto 
+			title="9. Children's Privacy" 
+			contenido='Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children.' 
+		/>
+
+		<Texto 
+			title="10. Changes to this policy" 
+			contenido='We may update this Privacy Policy from time to time. Updates will be posted on this page with a revised effective date.' 
+		/>
+
+		<Texto
+			title="11. Contact us" 
+			contenido='For questions or concerns regarding these Terms, please contact us at:
+					Email: info@greencountryls.com
+					Phone: +1 (208) 477-7960
+					Address: 18497 Midland Blvd, Nampa, Idaho, United States, ZIP 83687.' 
+		/>
+
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+  <Footer client:load />
 </MainLayout>

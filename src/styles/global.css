@@ -24,5 +24,6 @@ h1, h2, h3 {
 }
 
 .boton {
-    @apply px-4 py-2 bg-green-900 text-white rounded-4xl hover:bg-green-600 transition;
+    @apply px-4 py-2 bg-green-600 text-white rounded-4xl hover:bg-green-900 transition;
 }
+

@@ -8,7 +8,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about" },
-  { label: "Services", href: "/services" },
+  { label: "Landscaping Services", href: "/services" },
+  { label: "Nursery Products", href: "/nursery" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -26,7 +27,7 @@ const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden md:flex space-x-4">
           {navItems.map((item) => (
             <li key={item.label} data-aos="zoom-in">
               <a
