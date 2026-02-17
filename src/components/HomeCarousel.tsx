@@ -10,8 +10,8 @@ const slides = [
 	},
 	{
 		image: "/img/slider2-greencountry.webp",
-		title: "Hardscape and outdoor living spaces",
-		subtitle: "Custom-designed hardscape",
+		title: "Outdoor living spaces",
+		subtitle: "Custom-designed spaces",
 		link: "/services"
 	},
 	{
