@@ -20,10 +20,10 @@ const Contenido4: React.FC<Contenido4Props> = ({ title, subtitle, contenido, ima
 				/>
 			</div>
 			<div className="flex flex-col justify-center" data-aos="fade-up">
-				<h3 className="text-3xl font-bold text-stone-800">
+				<h3 className="text-2xl md:text-3xl font-bold text-stone-800">
 				{title}
 				</h3>
-				<h4 className="text-2xl font-bold text-stone-800 mb-4">
+				<h4 className="text-lg md:text-2xl font-bold text-stone-800 mb-4">
 					{subtitle}
 				</h4>
 				<ul className="text-stone-700 leading-relaxed">

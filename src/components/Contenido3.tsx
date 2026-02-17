@@ -15,7 +15,7 @@ const Contenido3: React.FC<Contenido3Props> = ({ title, subtitle, contenido, ima
 				<h3 className="text-3xl font-bold text-stone-800">
 				{title}
 				</h3>
-				<h4 className="text-2xl font-bold text-stone-800 mb-4">
+				<h4 className="text-lg md:text-2xl font-bold text-stone-800 mb-4">
 					{subtitle}
 				</h4>
 				<p className="text-stone-700 leading-relaxed">
