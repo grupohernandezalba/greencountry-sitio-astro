@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ButtonCall from "../components/ButtonCall";
 
 interface NavItem {
   label: string;
@@ -22,7 +23,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
-        <a href="/" className="text-2xl font-bold text-green-700 dark:text-green-400">
+        <a href="/">
           <img className="w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
         </a>
 
@@ -32,16 +33,14 @@ const Navbar: React.FC = () => {
             <li key={item.label} data-aos="zoom-in">
               <a
                 href={item.href}
-                className="crece px-2 py-2 text-gray-700 hover:text-green-600 transition dark:text-gray-300 dark:hover:text-green-400"
+                className="crece px-2 py-2 text-green-900 hover:text-green-600 transition dark:text-gray-300 dark:hover:text-green-400"
               >
                 {item.label}
               </a>
             </li>
           ))}
           <li>
-            <a href="tel:+12084777960" className="boton crece" data-aos="zoom-in">
-              Call Now! 208-477-7960 
-            </a>
+            <ButtonCall />
           </li>
         </ul>
 
@@ -66,13 +65,16 @@ const Navbar: React.FC = () => {
               <li key={item.label}>
                 <a
                   href={item.href}
-                  className="text-gray-700 hover:text-green-600 transition dark:text-gray-300 dark:hover:text-green-400"
+                  className="text-green-900 hover:text-green-600 transition dark:text-gray-300 dark:hover:text-green-400"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
                 </a>
               </li>
             ))}
+            <li>
+              <ButtonCall />
+            </li>
           </ul>
         </div>
       )}
