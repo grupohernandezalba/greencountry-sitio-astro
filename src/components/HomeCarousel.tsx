@@ -4,13 +4,13 @@ export default function HomeCarousel() {
 const slides = [
 	{
 		image: "/img/slider1-greencountry.webp",
-		title: "Trusted professional landscaping services in Idaho",
+		title: "Trusted landscaping services in Idaho",
 		subtitle: "Sustainable and expert landscaping solutions",
 		link: "/about"
 	},
 	{
 		image: "/img/slider2-greencountry.webp",
-		title: "Hardscape and outdoor living spaces in Idaho",
+		title: "Hardscape and outdoor living spaces",
 		subtitle: "Custom-designed hardscape features",
 		link: "/services"
 	},
@@ -45,13 +45,13 @@ const slides = [
 			<img
 			  src={src.image}
 			  alt={`Project ${i + 1}`}
-			  className="w-full h-64 md:h-screen object-cover"
+			  className="w-full h-128 md:h-screen object-cover"
 			/>
 			<div className="absolute inset-0 flex flex-col items-center justify-center bg-black/20">
-				<h2 className="text-3xl md:text-4xl font-bold text-white mb-2 text-shadow-lg">
+				<h2 className="text-2xl md:text-5xl font-bold text-white mb-2 text-shadow-lg">
 					{src.title}
 				</h2>
-				<p className="text-lg md:text-xl text-white/90 mb-6 text-shadow-lg">
+				<p className=" text-white/90 mb-6 text-shadow-lg">
 					{src.subtitle}
 				</p>
 				<a href={src.link} className="boton crece px-6 py-2">
