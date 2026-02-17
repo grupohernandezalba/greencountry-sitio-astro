@@ -17,7 +17,7 @@ const slides = [
 	{
 		image: "/img/slider3-greencountry.webp",
 		title: "Nursery products in Idaho",
-		subtitle: "High-quality plants and trees for Idaho's climate",
+		subtitle: "High-quality plants and trees",
 		link: "/nursery"
 	}
 ];
