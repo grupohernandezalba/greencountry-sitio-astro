@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function HomeCarousel() {
 const slides = [
 	{
-		image: "/img/slider1-greencountry.webp",
+		image: "/img/slider2-greencountry.webp",
 		title: "Trusted landscaping services",
 		subtitle: "Expert landscaping solutions",
 		link: "/about"
