@@ -65,9 +65,9 @@ const Navbar: React.FC = () => {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <span className="text-2xl">&times;</span>
+            <span className="text-3xl">&times;</span>
           ) : (
-            <span className="text-2xl">&#9776;</span>
+            <span className="text-3xl">&#9776;</span>
           )}
         </button>
       </div>
