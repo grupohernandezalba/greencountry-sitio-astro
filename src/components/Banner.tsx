@@ -8,7 +8,7 @@ interface BannerProps {
 const Banner: React.FC<BannerProps> = ({ title, image }) => {
   return (
     <div
-      className="w-full h-full bg-cover mt-25 bg-center flex items-center justify-center"
+      className="w-full h-full bg-cover mt-22 md:mt-25 bg-center flex items-center justify-center"
       style={{ backgroundImage: `url('/img/${image}')`, minHeight: '200px', maxHeight: '200px' }}
       data-aos="fade-down"
       >
