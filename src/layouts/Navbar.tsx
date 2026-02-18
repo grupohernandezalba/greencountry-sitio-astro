@@ -20,11 +20,11 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="w-full bg-white shadow-md fixed top-0 left-0 z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-2 md:px-6 py-4 flex justify-between items-center">
         
         {/* Logo */}
         <a href="/">
-          <img className="w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
+          <img className="w-36 md:w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
         </a>
         <a
             href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"

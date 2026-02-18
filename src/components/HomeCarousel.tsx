@@ -33,7 +33,7 @@ const slides = [
   };
 
   return (
-	<div className="relative w-full mx-auto overflow-hidden">
+	<div className="relative w-full mx-auto overflow-hidden mt-22 md:mt-27">
 	  
 	  {/* Slides */}
 	  <div
