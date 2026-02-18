@@ -9,8 +9,8 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About us", href: "/about" },
-  { label: "Landscaping Services", href: "/services" },
-  { label: "Nursery Products", href: "/nursery" },
+  { label: "Landscaping services", href: "/services" },
+  { label: "Nursery products", href: "/nursery" },
   { label: "Projects", href: "/projects" },
   { label: "Contact", href: "/contact" },
 ];
@@ -27,11 +27,12 @@ const Navbar: React.FC = () => {
           <img className="w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
         </a>
         <a
-          href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
-          className="text-green-900"
-          aria-label="Facebook"
-          target="_blank"
-          rel="noopener noreferrer"
+            href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
+            className="text-green-900"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-aos="zoom-in"
           >
           <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
         </a>
@@ -39,6 +40,7 @@ const Navbar: React.FC = () => {
 			href="#"
 			className="text-green-900"
 			aria-label="Instagram"
+            data-aos="zoom-in"
 		>
 			<img src="/icons/instagram.svg" className="w-6 h-6 crece" />
 		</a>
@@ -55,11 +57,8 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li data-aos="zoom-in">
-            <ButtonCall />
-          </li>
         </ul>
-
+        <ButtonCall data-aos="zoom-in" />
         {/* Mobile Button */}
         <button
           className="md:hidden text-gray-700 "
@@ -88,9 +87,6 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
             ))}
-            <li>
-              <ButtonCall />
-            </li>
           </ul>
         </div>
       )}
