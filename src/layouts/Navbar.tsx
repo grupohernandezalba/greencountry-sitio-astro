@@ -26,6 +26,22 @@ const Navbar: React.FC = () => {
         <a href="/">
           <img className="w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100"/>
         </a>
+        <a
+          href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
+          className="text-green-900"
+          aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
+        </a>
+		<a
+			href="#"
+			className="text-green-900"
+			aria-label="Instagram"
+		>
+			<img src="/icons/instagram.svg" className="w-6 h-6 crece" />
+		</a>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-4">
@@ -39,26 +55,6 @@ const Navbar: React.FC = () => {
               </a>
             </li>
           ))}
-          <li className="mt-2" data-aos="zoom-in">
-            <a
-                href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
-                className="text-green-900"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
-                </a>
-          </li>
-          <li className="mt-2" data-aos="zoom-in">
-              <a
-                href="#"
-                className="text-green-900"
-                aria-label="Instagram"
-              >
-                <img src="/icons/instagram.svg" className="w-6 h-6 crece" />
-              </a>
-          </li>
           <li data-aos="zoom-in">
             <ButtonCall />
           </li>
@@ -92,26 +88,6 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
             ))}
-            <li className="mt-2" data-aos="zoom-in">
-            <a
-                href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
-                className="text-green-900"
-                aria-label="Facebook"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
-                </a>
-          </li>
-          <li className="mt-2" data-aos="zoom-in">
-              <a
-                href="#"
-                className="text-green-900"
-                aria-label="Instagram"
-              >
-                <img src="/icons/instagram.svg" className="w-6 h-6 crece" />
-              </a>
-          </li>
             <li>
               <ButtonCall />
             </li>
