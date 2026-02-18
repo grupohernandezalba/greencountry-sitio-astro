@@ -36,15 +36,15 @@ const Review: React.FC = () => {
     ];
 
     return (
-        <section className="reviews-section py-12 px-6 bg-stone-100">
-            <h2 className="text-4xl font-bold text-center mb-12 text-green-700">
+        <section className="reviews-section py-12 px-6 bg-stone-100" data-aos="fade-up">
+            <h2 className="text-2xl md:text-4xl font-bold text-center mb-12">
                 Check out our reviews on Google
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {reviews.map((review) => (
                     <div
                         key={review.id}
-                        className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+                        className="bg-white rounded-lg shadow p-6"
                     >
                         <div className="flex items-center justify-between mb-3">
                             <h3 className="font-semibold text-gray-800">{review.author}</h3>
