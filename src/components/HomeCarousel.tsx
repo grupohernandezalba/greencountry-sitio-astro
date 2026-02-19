@@ -15,7 +15,7 @@ const slides = [
 		link: "/services"
 	},
 	{
-		image: "/img/slider3-greencountry.webp",
+		image: "/img/slider5-greencountry.webp",
 		title: "Nursery products",
 		subtitle: "High-quality plants and trees",
 		link: "/nursery"
