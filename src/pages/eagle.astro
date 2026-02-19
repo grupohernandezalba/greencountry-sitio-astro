@@ -1,0 +1,63 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navbar from "../layouts/Navbar.tsx";
+import Footer from "../layouts/Footer.tsx";
+import Banner from "../components/Banner.tsx";
+import HeroImage from "../components/HeroImage.tsx";
+import Contenido1 from "../components/Contenido1.tsx";
+import Contenido2 from "../components/Contenido2.tsx";
+import Contenido3 from "../components/Contenido3.tsx";
+import Contenido4 from "../components/Contenido4.tsx";
+import CallToAction from "../layouts/CallToAction.tsx";
+
+
+const contenidoChoose = [
+	"Schedule a free estimate",
+	"Experienced and knowledgeable team",
+	"High-quality materials and workmanship",
+	"Customer satisfaction guarantee",
+	"Competitive pricing and transparent quotes",
+	"On-time project completion and reliable service",
+	"Wide range of landscaping services",
+	"Customized solutions tailored to your needs",
+];
+
+const linksChoose = [
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#"
+];
+
+---
+
+<MainLayout>
+  <Navbar client:load />
+      <Banner title="Eagle ID" image="treasuryvalley-greencountry.webp" />
+
+	  <Contenido1 
+		title="Reliable Eagle ID, landscaping Services and Nursery products"
+		subtitle="Serving in the Treasure Valley"
+		contenido="Green Country Landscaping Services LLC is committed to delivering high-quality landscaping solutions with professionalism, reliability, and attention to detail. Proudly serving Idaho, including the Treasury Valley, we specialize in Landscape and Hardscape design, comprehensive Lawn Care services, and premium Nursery products."
+		image="boise1-greencountry.webp"
+	  />
+
+	  <div class="my-12"></div>
+
+      <HeroImage text="Trusted professional landscaping services" image="boise2-greencountry.webp" />
+		<Contenido4
+			title = "Professional Landscaping Services in Eagle, ID"
+			subtitle = "Quality and reliable services"
+			contenido = { contenidoChoose }
+			image = "boise3-greencountry.webp"
+			links = { linksChoose }
+		/>
+
+
+	  <CallToAction />
+  <Footer client:load />
+</MainLayout>

@@ -33,6 +33,29 @@ const contenidoServing = [
 	"Kuna, ID"
 ];
 
+const linksServing = [
+	"/boise",
+	"/eagle",
+	"/nampa",
+	"/caldwell",
+	"/meridian",
+	"/middleton",
+	"/star",
+	"/kuna"
+];
+
+const linksChoose = [
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#",
+	"#"
+];
+
+
 ---
 
 <MainLayout>
@@ -114,6 +137,7 @@ const contenidoServing = [
 			subtitle = "Quality and reliable services."
 			contenido = { contenidoChoose }
 			image = "aboutus3-greencountry.webp"
+			links = { linksChoose }
 		/>
 
 		<HeroImage text="High-quality materials and sustainable practices" image="aboutus5-greencountry.webp" />
@@ -132,6 +156,7 @@ const contenidoServing = [
 			subtitle = "in the Treasure Valley and beyond"
 			contenido = { contenidoServing }
 			image = "aboutus7-greencountry.webp"
+			links = { linksServing }
 		/>
 
 	  <CallToAction />

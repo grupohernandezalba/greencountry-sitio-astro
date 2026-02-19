@@ -1,14 +1,16 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { linkSync } from "fs";
 
 interface Contenido4Props {
-  title: string;
-  subtitle: string;
-  contenido: string[];
-  image: string;
+	title: string;
+	subtitle: string;
+	contenido: string[];
+	image: string;
+	links: string[];
 }
 
-const Contenido4: React.FC<Contenido4Props> = ({ title, subtitle, contenido, image }) => {
+const Contenido4: React.FC<Contenido4Props> = ({ title, subtitle, contenido, image, links }) => {
   return (
     <div className="container bg-white mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -28,7 +30,17 @@ const Contenido4: React.FC<Contenido4Props> = ({ title, subtitle, contenido, ima
 				</h4>
 				<ul className="text-stone-700 leading-relaxed">
 					{contenido.map((item, index) => (
-						<li><Check className="inline text-green-600" /> <span className="text-sm md:text-base">{item}</span></li>
+						<li>
+							{links[index] && links[index] !== '#' ? (
+								<a href={links[index]} className="crece">
+									<Check className="inline text-green-600" /> <span className="text-sm md:text-base">{item}</span>
+								</a>
+							) : (
+								<>
+									<Check className="inline text-green-600" /> <span className="text-sm md:text-base">{item}</span>
+								</>
+							)}
+						</li>
 					))}
 				</ul>
 			</div>
