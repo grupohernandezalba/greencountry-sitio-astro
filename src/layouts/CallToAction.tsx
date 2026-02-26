@@ -16,10 +16,10 @@ const CallToAction: React.FC = () => {
 			</p>
 
 			<a 
-			href="tel:+12081234567"
+			href="/quote"
 			className="crece inline-block bg-white text-stone-800 font-semibold text-lg px-8 py-4 rounded-4xl shadow-lg hover:bg-gray-100 transition duration-300"
 			>
-			Schedule a free quote Now!
+			Get a free quote!
 			</a>
 
 		</div>
