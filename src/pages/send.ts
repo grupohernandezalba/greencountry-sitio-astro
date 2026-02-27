@@ -27,11 +27,9 @@ export const POST: APIRoute = async ({ request }) => {
 
     // Email interno
     await resend.emails.send({
-      from: `admin@greencountryls.com`,
+      from: `info@greencountryls.com`,
       to: `${email}`,
       cc:   [
-                "admin@greencountryls.com",
-                "sales@greencountryls.com",
                 "info@greencountryls.com"
             ],
       subject: "Green Country new contact message",
