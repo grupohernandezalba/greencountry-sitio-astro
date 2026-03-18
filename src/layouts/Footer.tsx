@@ -15,37 +15,37 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-200  text-gray-700 " data-aos="fade-in">
       <div className="max-w-7xl mx-auto px-6 py-12">
-        
+
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 text-center md:text-left">
-          
+
           {/* Columna 1 - Address */}
           <div className="fade-up delay-100" data-aos="fade-up">
             <h3 className="text-lg font-semibold mb-4 text-green-900 ">
               <MapPin className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Address
             </h3>
             <address className="not-italic">
-                <a 
-                href="https://maps.app.goo.gl/TVkk5i4TmypxN7Y6A" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://maps.app.goo.gl/TVkk5i4TmypxN7Y6A"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="crece"
-                >
-                  18497 Midland Blvd <br />
-                  Nampa, Idaho <br />
-                  United States <br />
-                  ZIP 83687
-                </a>
+              >
+                18497 Midland Blvd <br />
+                Nampa, Idaho <br />
+                United States <br />
+                ZIP 83687
+              </a>
             </address>
             <a href="tel:+12084777960" className="crece">
               Phone: +1 (208) 477-7960
-            </a> 
+            </a>
           </div>
 
           {/* Columna 2 - Privacy Policy */}
           <div data-aos="fade-up" data-aos-delay="300">
             <h3 className="text-lg font-semibold mb-4 text-green-900 ">
-              <Lock className="w-5 h-5 inline-flex items-center gap-2"strokeWidth={3} /> Legal
+              <Lock className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Legal
             </h3>
             <ul className="space-y-2">
               <li>
@@ -73,19 +73,21 @@ const Footer: React.FC = () => {
               <ThumbsUp className="w-5 h-5 inline-flex items-center gap-2" strokeWidth={3} /> Follow Us
             </h3>
             <div className="flex justify-center md:justify-start space-x-4">
-                <a
-                href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
+              <a
+                href="https://www.facebook.com/share/1C1n8FetMw/"
                 className="text-green-900"
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
-                >
+              >
                 <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
-                </a>
+              </a>
               <a
-                href="#"
+                href="https://www.instagram.com/greencountry.llc  "
                 className="text-green-900"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img src="/icons/instagram.svg" className="w-6 h-6 crece" />
               </a>
@@ -96,9 +98,9 @@ const Footer: React.FC = () => {
           <div className="flex flex-col items-center md:items-start" data-aos="fade-up" data-aos-delay="700">
             <a href="/">
               <img
-              src="/img/logo-transparente-greencountry.webp"
-              alt="Green Country Logo"
-              className="w-1/2 md:w-full crece"
+                src="/img/logo-transparente-greencountry.webp"
+                alt="Green Country Logo"
+                className="w-1/2 md:w-full crece"
               />
             </a>
           </div>

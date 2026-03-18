@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
           <img className="w-36 md:w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100" />
         </a>
         <a
-          href="https://www.facebook.com/p/Green-country-lawn-care-100065310920759/"
+          href="https://www.facebook.com/share/1C1n8FetMw/"
           className="text-green-900"
           aria-label="Facebook"
           target="_blank"
@@ -39,10 +39,12 @@ const Navbar: React.FC = () => {
           <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
         </a>
         <a
-          href="#"
+          href="https://www.instagram.com/greencountry.llc"
           className="text-green-900"
           aria-label="Instagram"
           data-aos="zoom-in"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <img src="/icons/instagram.svg" className="w-6 h-6 crece" />
         </a>
