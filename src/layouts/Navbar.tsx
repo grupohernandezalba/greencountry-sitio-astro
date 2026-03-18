@@ -100,7 +100,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white  shadow-md">
+        <div className="md:hidden bg-white shadow-md">
           <ul className="flex flex-col items-center py-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.label}>
@@ -113,43 +113,20 @@ const Navbar: React.FC = () => {
                 </a>
               </li>
             ))}
-            <li className="w-full flex flex-col items-center">
-              <a href="#"
-                onClick={() => setIsRequestOpen(!isRequestOpen)}
-                className="text-green-900 hover:text-green-600 transition flex items-center"
-              >
-                Request an estimate
-              </a>
-              {isRequestOpen && (
-                <ul className="flex flex-col items-center mt-3 w-full bg-gray-50 py-3 space-y-3">
-                  <li>
-                    <a
-                      href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/ipUbzYWI67lZS41nzPZL"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-green-900 hover:text-green-600 transition"
-                      onClick={() => { setIsOpen(false); setIsRequestOpen(false); }}
-                    >
-                      Lawn care estimate
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/zNODElhUVki9OYVUUCpm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-green-900 hover:text-green-600 transition"
-                      onClick={() => { setIsOpen(false); setIsRequestOpen(false); }}
-                    >
-                      Landscaping estimate
-                    </a>
-                  </li>
-                </ul>
-              )}
-            </li>
           </ul>
         </div>
       )}
+
+      <div className="md:hidden max-w-7xl mx-auto px-12 md:px-6 py-2 pt-0 flex justify-between items-center text-center">
+        Request an estimate:
+        <a href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/ipUbzYWI67lZS41nzPZL" target="_blank" rel="noopener noreferrer" className="text-sm text-green-900 hover:text-green-600 transition border-b border-gray-50">
+          Lawn care
+        </a>
+        or
+        <a href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/zNODElhUVki9OYVUUCpm" target="_blank" rel="noopener noreferrer" className="text-sm text-green-900 hover:text-green-600 transition">
+          Landscaping
+        </a>
+      </div>
     </nav>
   );
 };
