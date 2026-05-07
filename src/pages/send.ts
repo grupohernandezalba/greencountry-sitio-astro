@@ -15,6 +15,37 @@ export const POST: APIRoute = async ({ request }) => {
     const service = formData.get("service") as string;
     const message = formData.get("message") as string;
 
+
+
+    const token = formData.get("cf-turnstile-response");
+
+    console.log(token);
+
+    if (!token) {
+      return new Response("Token faltante", { status: 400 });
+    }
+
+    const verifyRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams({
+          secret: import.meta.env.TURNSTILE_SECRET_KEY,
+          response: token as string
+        })
+      }
+    );
+
+    const data = await verifyRes.json();
+
+    if (!data.success) {
+      return new Response("Verificación fallida", { status: 403 });
+    }
+
+
     if (!name || !email || !phone || !service || !message) {
       return new Response(
         JSON.stringify({
@@ -29,9 +60,9 @@ export const POST: APIRoute = async ({ request }) => {
     await resend.emails.send({
       from: `info@greencountryls.com`,
       to: `${email}`,
-      cc:   [
-                "info@greencountryls.com"
-            ],
+      cc: [
+        "info@greencountryls.com"
+      ],
       subject: "Green Country new contact message",
       html: `
         <h2>New Contact Message</h2>

@@ -21,101 +21,77 @@ import CallToAction from "../layouts/CallToAction.tsx";
 					Green Country Landscaping Services LLC
 				</h3>
 				<p class="text-stone-700 leading-relaxed">
-					Please fill out the following contact form with your information so we can send you a personalized quote.
+					Please fill out the following contact form with your information so we can send you a personalized
+					quote.
 				</p>
 			</div>
 		</div>
 	</div>
 
+	<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
 	<form id="formulario" action="/send/" method="post" role="form">
 		<div class="max-w-6xl mx-auto py-12" data-aos="fade-up" data-aos-delay="100">
-		
+
 			<!-- Main Grid -->
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-			
-			<!-- Form Column -->
-			<div>
-				
-				<div class="py-2">
-				<input 
-					type="text" 
-					name="name" 
-					id="name"
-					placeholder="Full Name"
-					required
-					class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition"
-				>
+
+				<!-- Form Column -->
+				<div>
+
+					<div class="py-2">
+						<input type="text" name="name" id="name" placeholder="Full Name" required
+							class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition">
+					</div>
+
+					<div class="py-2">
+						<input type="email" name="email" id="email" placeholder="Email Address" required
+							class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition">
+					</div>
+
+					<div class="py-2">
+						<input type="number" step="any" name="phone" id="phone" placeholder="Phone Number" required
+							class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition">
+					</div>
+
+					<div class="form-group">
+						<select name="service" required
+							class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition bg-white text-stone-800">
+							<option value="">Select a service</option>
+							<option value="Landscape Design">Landscape Design</option>
+							<option value="Hardscaping">Hardscaping</option>
+							<option value="Lawn care">Lawn care</option>
+							<option value="Nursery products">Nursery products</option>
+						</select>
+					</div>
+
+					<div class="py-2">
+						<textarea name="message" rows="5" placeholder="Briefly describe your project" required
+							class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition resize-none"></textarea>
+					</div>
+
+					<div class="cf-turnstile" data-sitekey={import.meta.env.PUBLIC_TURNSTILE_SITE_KEY}>
+					</div>
+
+					<div class="py-2 text-right">
+						<button type="submit" class="boton crece">
+							Send Message
+						</button>
+					</div>
+
 				</div>
 
-				<div class="py-2">
-				<input 
-					type="email" 
-					name="email" 
-					id="email"
-					placeholder="Email Address"
-					required
-					class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition"
-				>
-				</div>
-
-				<div class="py-2">
-				<input 
-					type="number" 
-					step="any"
-					name="phone" 
-					id="phone"
-					placeholder="Phone Number"
-					required
-					class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition"
-				>
-				</div>
-
-				<div class="form-group">
-					<select name="service" required class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition bg-white text-stone-800">
-						<option value="">Select a service</option>
-						<option value="Landscape Design">Landscape Design</option>
-						<option value="Hardscaping">Hardscaping</option>
-						<option value="Lawn care">Lawn care</option>
-						<option value="Nursery products">Nursery products</option>
-					</select>
-				</div>
-
-				<div class="py-2">
-				<textarea 
-					name="message"
-					rows="5"
-					placeholder="Briefly describe your project"
-					required
-					class="w-full border border-gray-300 rounded-lg px-4 py-3 focus:ring-2 focus:ring-green-600 focus:border-green-600 focus:outline-none transition resize-none"
-				></textarea>
-				</div>
-
-				<div class="py-2 text-right">
-				<button 
-					type="submit"
-					class="boton crece"
-				>
-					Send Message
-				</button>
+				<!-- Image Column -->
+				<div class="flex items-center justify-center mt-8 md:mt-0">
+					<img src="/img/logo-transparente-greencountry.webp" alt="Quote" class="w-3/4 max-w-sm">
 				</div>
 
 			</div>
-
-			<!-- Image Column -->
-			<div class="flex items-center justify-center mt-8 md:mt-0">
-				<img 
-				src="/img/logo-transparente-greencountry.webp" 
-				alt="Quote"
-				class="w-3/4 max-w-sm"
-				>
-			</div>
-
-			</div>
-		</div>  
-		</form>
+		</div>
+	</form>
 
 
 
 
-  	<Footer client:load />
+	<Footer client:load />
 </MainLayout>
