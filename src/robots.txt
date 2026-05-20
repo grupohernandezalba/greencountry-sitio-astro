@@ -1,0 +1,38 @@
+# Permite el acceso normal a motores de búsqueda legítimos
+User-agent: *
+Allow: /
+
+# Bloquear rutas comúnmente exploradas por bots maliciosos
+Disallow: /.env
+Disallow: /.git
+Disallow: /.svn
+Disallow: /.DS_Store
+
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/
+Disallow: /xmlrpc.php
+Disallow: /wp-login.php
+Disallow: /wp-admin/install.php
+
+Disallow: /wordpress/
+Disallow: /blog/
+Disallow: /web/
+Disallow: /website/
+Disallow: /wp/
+Disallow: /news/
+Disallow: /shop/
+Disallow: /cms/
+Disallow: /site/
+Disallow: /test/
+Disallow: /media/
+
+Disallow: /quote
+Disallow: /middleton
+
+# Archivos y directorios sensibles
+Disallow: /config/
+Disallow: /backup/
+Disallow: /backups/
+Disallow: /tmp/
+Disallow: /logs/
