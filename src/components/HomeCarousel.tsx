@@ -2,6 +2,12 @@ import { useState } from "react";
 
 export default function HomeCarousel() {
 const slides = [
+		{
+		image: "/img/slider6-greencountry.webp",
+		title: "Shop Online",
+		subtitle: "Visit our online store for landscaping services and nursery products",
+		link: "https://app.urable.com/virtual-shop/QNnbmt80F0QyjZWrhi2D"
+	},
 	{
 		image: "/img/slider2-greencountry.webp",
 		title: "Trusted landscaping services",
