@@ -1,0 +1,300 @@
+---
+// Landscaping & hardscaping services carousel.
+// Matches the site's stone palette + brand green (#0d542b), Poppins/Inter fonts
+// (loaded globally in MainLayout) and reuses the AOS "fade-up" animation.
+//
+// IMAGES: each `image` points at the intended final filename under /public/img,
+// following the site's naming convention (e.g. firepitinstallation-greencountry.webp).
+// Those photos don't exist in the repo yet, so until you add them each card falls
+// back (via onerror) to an existing image so the section never looks broken.
+// Drop the real .webp in /public/img with the matching name and it swaps in
+// automatically — no code change needed.
+
+const services = [
+  {
+    title: "Flower, Plant, Shrub & Tree Installation",
+    text: "Professional planting that brings color, texture, and life to your yard, with healthy plants chosen to thrive in Idaho's climate and placed for lasting beauty.",
+    image: "plantinstallation-greencountry.webp",
+    alt: "Freshly planted trees and shrubs along a new garden bed",
+  },
+  {
+    title: "Landscape Curbing Installation",
+    text: "Durable concrete curbing that defines beds, walkways, and borders with clean, continuous lines, adding structure and lasting curb appeal to your property.",
+    image: "landscapecurbing-greencountry.webp",
+    alt: "Concrete landscape curbing edging a garden bed",
+  },
+  {
+    title: "Full Landscape Build for New Homes",
+    text: "Complete landscape design and installation for new construction, turning bare lots into finished, functional outdoor spaces ready to enjoy from day one.",
+    image: "fulllandscapebuild-greencountry.webp",
+    alt: "Newly landscaped yard around a recently built home",
+  },
+  {
+    title: "Subdivision & HOA Landscape Maintenance",
+    text: "Reliable, scheduled care for subdivisions and HOA communities, keeping shared green spaces clean, healthy, and consistently well-groomed all season long.",
+    image: "hoamaintenance-greencountry.webp",
+    alt: "Well-maintained green common area in a residential community",
+  },
+  {
+    title: "Yard Renovation",
+    text: "Full yard makeovers that revive tired, overgrown spaces, refreshing plants, grading, and features to give your property a clean, modern new look.",
+    image: "yardrenovation-greencountry.webp",
+    alt: "Backyard mid-renovation with fresh landscaping",
+  },
+  {
+    title: "Custom Fire Pit Installation",
+    text: "Beautifully built fire pits designed to fit your space and style, creating a warm, inviting gathering spot you can enjoy in your backyard all year long.",
+    image: "firepitinstallation-greencountry.webp",
+    alt: "Custom stone fire pit set into a paver patio",
+  },
+  {
+    title: "Landscape Installation Services",
+    text: "Expert installation of plants, sod, mulch, and features that brings your design to life with careful placement and quality materials built to last.",
+    image: "landscapeinstallation-greencountry.webp",
+    alt: "Crew installing sod and landscape features in a yard",
+  },
+  {
+    title: "Custom Paver Installation",
+    text: "Custom paver patios, walkways, and driveways installed with precision, combining durable materials and clean design to elevate your outdoor living space.",
+    image: "paverinstallation-greencountry.webp",
+    alt: "Freshly laid paver patio with clean joint lines",
+  },
+  {
+    title: "Custom Retaining Wall Installation",
+    text: "Sturdy, well-engineered retaining walls that manage slopes and erosion while adding structure, dimension, and lasting visual appeal to your landscape.",
+    image: "retainingwall-greencountry.webp",
+    alt: "Stacked-block retaining wall on a graded slope",
+  },
+  {
+    title: "Landscape Lighting Installation",
+    text: "Professional outdoor lighting that highlights your landscape's best features, improving safety and ambiance so you can enjoy your yard into the evening.",
+    image: "landscapelighting-greencountry.webp",
+    alt: "Warm landscape lighting illuminating a garden path at dusk",
+  },
+  {
+    title: "Stone Steps Installation",
+    text: "Natural stone steps built to balance beauty and function, creating safe, attractive transitions across slopes and elevation changes in your yard.",
+    image: "stonesteps-greencountry.webp",
+    alt: "Natural stone steps set into a landscaped slope",
+  },
+  {
+    title: "Fence Installation",
+    text: "Quality fence installation that adds privacy, security, and definition to your property, with durable materials and clean workmanship built to last.",
+    image: "fenceinstallation-greencountry.webp",
+    alt: "Newly installed wood fence along a property line",
+  },
+  {
+    title: "Custom Waterfalls & Water Features",
+    text: "Custom waterfalls and water features that bring soothing sound and gentle movement to your landscape, creating a peaceful focal point you'll love.",
+    image: "waterfeatures-greencountry.webp",
+    alt: "Backyard water feature with a small cascading waterfall",
+  },
+  {
+    title: "Builder Landscape Packages & New Construction Services",
+    text: "Complete landscape packages for builders and new construction, delivering turnkey outdoor solutions that add value and curb appeal to every new home.",
+    image: "builderpackages-greencountry.webp",
+    alt: "Landscaped front yard of a new-construction home",
+  },
+];
+
+// Existing repo images used as graceful fallbacks (one per card) until the real
+// service photos are added. Remove this + the onerror once real photos exist.
+const fallbacks = [
+  "services1-greencountry.webp", "services2-greencountry.webp",
+  "services3-greencountry.webp", "services4-greencountry.webp",
+  "services5-greencountry.webp", "project1-greencountry.webp",
+  "project2-greencountry.webp", "project3-greencountry.webp",
+  "project4-greencountry.webp", "project5-greencountry.webp",
+  "project6-greencountry.webp", "project7-greencountry.webp",
+  "project8-greencountry.webp", "project9-greencountry.webp",
+];
+---
+
+<!-- Green header band (matches the mockup). Delete this <div> to slot the
+     carousel under the page's existing "Landscaping services" heading instead. -->
+<div class="bg-[#0d542b] px-4 md:px-12 py-14 md:py-20" data-aos="fade-down">
+  <h2 class="max-w-4xl mx-auto text-center text-white text-3xl md:text-5xl font-bold leading-tight">
+    Our landscaping and hardscaping services
+  </h2>
+</div>
+
+<section class="bg-stone-100 px-4 md:px-12 py-12" aria-labelledby="landscape-services-heading">
+  <div class="max-w-6xl mx-auto" data-services-carousel>
+
+    <!-- Control bar: eyebrow + arrows -->
+    <div class="flex items-center justify-between gap-4 mb-8" data-aos="fade-up">
+      <p id="landscape-services-heading" class="text-[#0d542b] font-bold tracking-widest uppercase text-sm">
+        What we do
+      </p>
+      <div class="hidden md:flex gap-2.5 shrink-0">
+        <button
+          type="button"
+          data-dir="prev"
+          aria-label="Previous services"
+          class="grid place-items-center w-11 h-11 rounded-full border-[1.5px] border-[#0d542b] text-[#0d542b] bg-white hover:bg-[#0d542b] hover:text-white transition disabled:opacity-30 disabled:hover:bg-white disabled:hover:text-[#0d542b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button
+          type="button"
+          data-dir="next"
+          aria-label="Next services"
+          class="grid place-items-center w-11 h-11 rounded-full border-[1.5px] border-[#0d542b] text-[#0d542b] bg-white hover:bg-[#0d542b] hover:text-white transition disabled:opacity-30 disabled:hover:bg-white disabled:hover:text-[#0d542b] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Track -->
+    <div
+      data-track
+      class="gc-track flex gap-6 overflow-x-auto snap-x snap-mandatory pb-1.5"
+      role="region"
+      aria-label="Landscaping services carousel"
+      tabindex="0"
+    >
+      {services.map((s, i) => (
+        <article
+          class="snap-start flex-none basis-[86%] md:basis-[calc((100%-1.5rem)/2)] lg:basis-[calc((100%-3rem)/3)]"
+          data-aos="fade-up"
+          data-aos-delay={`${(i % 3) * 120}`}
+        >
+          <div class="group">
+            <div class="aspect-[16/10] overflow-hidden rounded-xl bg-stone-200">
+              <img
+                src={`/img/${s.image}`}
+                alt={s.alt}
+                loading="lazy"
+                onerror={`this.onerror=null;this.src='/img/${fallbacks[i % fallbacks.length]}'`}
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <h3 class="mt-4 text-xl md:text-2xl font-bold text-stone-800 leading-snug">
+              {s.title}
+            </h3>
+            <p class="mt-2 text-stone-600 leading-relaxed text-sm md:text-base">
+              {s.text}
+            </p>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <!-- Dots (built by script) -->
+    <div data-dots class="flex justify-center gap-2.5 mt-8" role="tablist" aria-label="Carousel pages"></div>
+
+  </div>
+</section>
+
+<style>
+  /* Hide the native scrollbar on the track (kept scrollable + swipeable). */
+  .gc-track {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* old Edge */
+    scroll-behavior: smooth;
+  }
+  .gc-track::-webkit-scrollbar { display: none; }
+  .gc-track.is-dragging { scroll-behavior: auto; cursor: grabbing; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gc-track { scroll-behavior: auto; }
+  }
+</style>
+
+<script>
+  const root = document.querySelector("[data-services-carousel]");
+  if (root) {
+    const track = root.querySelector("[data-track]");
+    const dotsBox = root.querySelector("[data-dots]");
+    const prevBtn = root.querySelector('[data-dir="prev"]');
+    const nextBtn = root.querySelector('[data-dir="next"]');
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const cards = () => Array.from(track.children);
+
+    const dotBase = "h-2.5 w-2.5 rounded-full bg-stone-300 transition-all cursor-pointer";
+    const dotActive = "h-2.5 w-6 rounded-full bg-[#0d542b] transition-all cursor-pointer";
+
+    function metrics() {
+      const first = cards()[0];
+      const cardW = first ? first.getBoundingClientRect().width : 0;
+      const gap = parseFloat(getComputedStyle(track).gap) || 24;
+      const per = Math.max(1, Math.round(track.clientWidth / (cardW + gap)));
+      const step = per * (cardW + gap);
+      const pages = Math.ceil(cards().length / per);
+      return { step, pages };
+    }
+
+    function currentPage() {
+      const { step } = metrics();
+      return step ? Math.round(track.scrollLeft / step) : 0;
+    }
+
+    function goToPage(i) {
+      const { step } = metrics();
+      track.scrollTo({ left: i * step, behavior: reduceMotion ? "auto" : "smooth" });
+    }
+
+    function buildDots() {
+      const { pages } = metrics();
+      dotsBox.innerHTML = "";
+      for (let i = 0; i < pages; i++) {
+        const b = document.createElement("button");
+        b.type = "button";
+        b.setAttribute("role", "tab");
+        b.setAttribute("aria-label", `Go to page ${i + 1}`);
+        b.className = dotBase;
+        b.addEventListener("click", () => goToPage(i));
+        dotsBox.appendChild(b);
+      }
+    }
+
+    function sync() {
+      const { pages } = metrics();
+      const cur = Math.min(currentPage(), pages - 1);
+      Array.from(dotsBox.children).forEach((d, i) => {
+        d.className = i === cur ? dotActive : dotBase;
+        d.setAttribute("aria-current", i === cur ? "true" : "false");
+      });
+      const maxScroll = track.scrollWidth - track.clientWidth - 1;
+      prevBtn.disabled = track.scrollLeft <= 1;
+      nextBtn.disabled = track.scrollLeft >= maxScroll;
+    }
+
+    prevBtn.addEventListener("click", () => goToPage(currentPage() - 1));
+    nextBtn.addEventListener("click", () => goToPage(currentPage() + 1));
+    track.addEventListener("scroll", () => window.requestAnimationFrame(sync), { passive: true });
+
+    // Pointer drag-to-scroll for mouse users (touch scrolls natively).
+    let down = false, startX = 0, startLeft = 0, moved = false;
+    track.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "touch") return;
+      down = true; moved = false;
+      startX = e.clientX; startLeft = track.scrollLeft;
+      track.classList.add("is-dragging");
+    });
+    window.addEventListener("pointermove", (e) => {
+      if (!down) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 4) moved = true;
+      track.scrollLeft = startLeft - dx;
+    });
+    window.addEventListener("pointerup", () => {
+      if (!down) return;
+      down = false;
+      track.classList.remove("is-dragging");
+      if (moved) goToPage(Math.round(track.scrollLeft / metrics().step));
+    });
+    track.addEventListener("click", (e) => { if (moved) e.preventDefault(); }, true);
+
+    let rt;
+    window.addEventListener("resize", () => {
+      clearTimeout(rt);
+      rt = setTimeout(() => { buildDots(); sync(); }, 150);
+    });
+
+    buildDots();
+    sync();
+  }
+</script>
