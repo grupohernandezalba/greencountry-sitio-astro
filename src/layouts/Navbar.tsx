@@ -117,24 +117,13 @@ const Navbar: React.FC = () => {
         </div>
       )}
 
-      {/* Mobile "request an estimate" quick bar */}
-      <div className="md:hidden border-t border-gray-100 px-4 py-2 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm text-gray-700">
-        <span>Request an estimate:</span>
-        
-          href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/ipUbzYWI67lZS41nzPZL"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-green-900 hover:text-green-600 underline underline-offset-2 transition whitespace-nowrap"
-        >
+      <div className="md:hidden max-w-7xl mx-auto px-12 md:px-6 py-2 pt-0 flex justify-between items-center text-center">
+        Request an estimate:
+        <a href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/ipUbzYWI67lZS41nzPZL" target="_blank" rel="noopener noreferrer" className="text-sm text-green-900 hover:text-green-600 transition border-b border-gray-50">
           Lawn care
         </a>
-        <span>or</span>
-        
-          href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/zNODElhUVki9OYVUUCpm"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-semibold text-green-900 hover:text-green-600 underline underline-offset-2 transition whitespace-nowrap"
-        >
+        or
+        <a href="https://app.urable.com/form/QNnbmt80F0QyjZWrhi2D/zNODElhUVki9OYVUUCpm" target="_blank" rel="noopener noreferrer" className="text-sm text-green-900 hover:text-green-600 transition">
           Landscaping
         </a>
       </div>
