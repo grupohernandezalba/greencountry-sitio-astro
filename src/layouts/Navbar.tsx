@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         <a href="/">
           <img className="w-36 md:w-48" src="/img/logo-transparente-greencountry.webp" alt="Green Country Landscaping Services LLC" data-aos="zoom-in" data-aos-delay="100" />
         </a>
-        
+        <a
           href="https://www.facebook.com/share/1C1n8FetMw/"
           className="text-green-900"
           aria-label="Facebook"
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
         >
           <img src="/icons/facebook.svg" className="w-6 h-6 crece" />
         </a>
-        
+        <a
           href="https://www.instagram.com/greencountry.llc"
           className="text-green-900"
           aria-label="Instagram"
@@ -53,7 +53,7 @@ const Navbar: React.FC = () => {
         <ul className="hidden md:flex space-x-4 items-center">
           {navItems.map((item) => (
             <li key={item.label} data-aos="zoom-in">
-              
+              <a
                 href={item.href}
                 className="crece px-2 py-2 text-green-900 hover:text-green-600 transition "
               >
@@ -104,7 +104,7 @@ const Navbar: React.FC = () => {
           <ul className="flex flex-col items-center py-4 space-y-4">
             {navItems.map((item) => (
               <li key={item.label}>
-                
+                <a
                   href={item.href}
                   className="text-green-900 hover:text-green-600 transition"
                   onClick={() => setIsOpen(false)}
