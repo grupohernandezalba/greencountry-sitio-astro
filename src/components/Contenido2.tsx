@@ -5,9 +5,11 @@ interface Contenido2Props {
   subtitle: string;
   contenido: string;
   image: string;
+  buttonText?: string;
+  buttonHref?: string;
 }
 
-const Contenido2: React.FC<Contenido2Props> = ({ title, subtitle, contenido, image }) => {
+const Contenido2: React.FC<Contenido2Props> = ({ title, subtitle, contenido, image, buttonText, buttonHref }) => {
   return (
     <div className="container bg-white mx-auto px-4 py-4 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -28,6 +30,11 @@ const Contenido2: React.FC<Contenido2Props> = ({ title, subtitle, contenido, ima
 				<p className="text-stone-700 leading-relaxed">
 					{contenido}
 				</p>
+				{buttonText && buttonHref && (
+					<a href={buttonHref} className="boton crece mt-6 w-fit">
+						{buttonText}
+					</a>
+				)}
 			</div>
         </div>
     </div>
