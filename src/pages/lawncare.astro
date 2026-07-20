@@ -6,6 +6,7 @@ import Banner from "../components/Banner.tsx";
 import HeroImage from "../components/HeroImage.tsx";
 import Contenido3 from "../components/Contenido3.tsx";
 import CallToAction from "../layouts/CallToAction.tsx";
+import LawnCareServices from "../components/LawnCareServices.astro";
 
 ---
 
@@ -13,30 +14,7 @@ import CallToAction from "../layouts/CallToAction.tsx";
   <Navbar client:load />
       <Banner title="Lawn care" image="lawncare1-greencountry.webp" />
 
-		<div class="bg-stone-100 mx-auto px-4 md:px-12 py-12">
-			<div class="grid grid-cols-2 gap-8">
-				<div class="flex flex-col justify-center" data-aos="fade-up">
-					<h2 class="text-2xl md:text-4xl font-bold text-stone-800">
-					Lawn care services.
-					</h2>
-					<h3 class="text-lg md:text-2xl font-bold text-stone-800 mb-4">
-						Quality work you can trust
-					</h3>
-					<p class="text-stone-700 leading-relaxed pb-6">
-						We provide comprehensive lawn care services including mowing, fertilization, aeration, and pest control. Our team uses high-quality products and sustainable practices.
-					</p>
-				</div>
-				<div class="md:m-4 p-8 mb-4" data-aos="fade-up" data-aos-delay="400">
-					<lord-icon
-						src="https://cdn.lordicon.com/dfarnxxi.json"
-						trigger="loop"
-						stroke="light"
-						colors="primary:#0d542b,secondary:#00a63e"
-						style="width:200px;height:200px; display:block; margin: 0 auto;">
-					</lord-icon>
-				</div>
-			</div>
-		</div>
+		<LawnCareServices />
 
 		<HeroImage text="Customized lawn care solutions" image="lawncare2-greencountry.webp" />
 
