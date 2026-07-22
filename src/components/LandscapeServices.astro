@@ -24,18 +24,6 @@ const services = [
     alt: "Concrete landscape curbing edging a garden bed",
   },
   {
-    title: "Full Landscape Build for New Homes",
-    text: "Complete landscape design and installation for new construction, turning bare lots into finished, functional outdoor spaces ready to enjoy from day one.",
-    image: "full-build-12.jpg",
-    alt: "Newly landscaped yard around a recently built home",
-  },
-  {
-    title: "Subdivision & HOA Landscape Maintenance",
-    text: "Reliable, scheduled care for subdivisions and HOA communities, keeping shared green spaces clean, healthy, and consistently well-groomed all season long.",
-    image: "project4-greencountry.webp",
-    alt: "Well-maintained green common area in a residential community",
-  },
-  {
     title: "Yard Renovation",
     text: "Full yard makeovers that revive tired, overgrown spaces, refreshing plants, grading, and features to give your property a clean, modern new look.",
     image: "yardrenovation-greencountry.webp",
@@ -88,13 +76,7 @@ const services = [
     text: "Custom waterfalls and water features that bring soothing sound and gentle movement to your landscape, creating a peaceful focal point you'll love.",
     image: "project3-greencountry.webp",
     alt: "Backyard water feature with a small cascading waterfall",
-  },
-  {
-    title: "Builder Landscape Packages & New Construction Services",
-    text: "Complete landscape packages for builders and new construction, delivering turnkey outdoor solutions that add value and curb appeal to every new home.",
-    image: "services2-greencountry.webp",
-    alt: "Landscaped front yard of a new-construction home",
-  },
+  }
 ];
 
 // Existing repo images used as graceful fallbacks (one per card) until the real
@@ -109,14 +91,6 @@ const fallbacks = [
   "project8-greencountry.webp", "project9-greencountry.webp",
 ];
 ---
-
-<!-- Green header band (matches the mockup). Delete this <div> to slot the
-     carousel under the page's existing "Landscaping services" heading instead. -->
-<div class="bg-[#0d542b] px-4 md:px-12 py-14 md:py-20" data-aos="fade-down">
-  <h2 class="max-w-4xl mx-auto text-center text-white text-3xl md:text-5xl font-bold leading-tight">
-    Our landscaping and hardscaping services
-  </h2>
-</div>
 
 <section class="bg-stone-100 px-4 md:px-12 py-12" aria-labelledby="landscape-services-heading">
   <div class="max-w-6xl mx-auto" data-services-carousel>
