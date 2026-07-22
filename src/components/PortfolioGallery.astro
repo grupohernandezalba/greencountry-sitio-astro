@@ -1,0 +1,220 @@
+---
+// Residential portfolio — filterable image gallery.
+// Mirrors LandscapeServices.astro conventions: brand green (#0d542b) + secondary
+// (#00a63e), stone palette, Poppins/Inter (loaded globally in MainLayout), AOS
+// "fade-up" (AOS.init lives in Footer.tsx), and GLightbox (loaded globally in
+// MainLayout). The lightbox is REBUILT on every filter change so its prev/next
+// only cycles through the photos currently shown — not all of them.
+//
+// IMAGES: `file` is the filename under /public/img. Drop the 22 photos there
+// using these exact names and they appear automatically. Until then, each tile
+// falls back (via onerror) to an existing repo image so nothing looks broken.
+//
+// CATEGORIES: `cats` drives the filters. Valid slugs:
+//   landscaping | pavers | firepits | water   (every photo is also in "All")
+// To recategorize a photo, just edit its cats array below.
+//
+// NOTE: the carved-boulder photos (IMG_0211 / IMG_0212) are tagged "firepits".
+// If that bowl is actually a water bubbler, change their cats to include
+// "water" instead — that's the one tag left unconfirmed.
+
+const categories = [
+  { slug: "all",         label: "All" },
+  { slug: "landscaping", label: "Landscaping" },
+  { slug: "pavers",      label: "Pavers & Retaining Walls" },
+  { slug: "firepits",    label: "Fire Pits" },
+  { slug: "water",       label: "Water Features" },
+];
+
+const projects = [
+  { file: "bushtrimming-greencountry-1 1.png", cats: ["landscaping", "pavers"],            alt: "Curved paver walkway bordered by a trimmed hedge alongside a home" },
+  { file: "IMG_0163 1.png", cats: ["landscaping", "pavers"],                               alt: "Stone-capped raised planter and rock bed beside a paver patio" },
+  { file: "IMG_0164 1.png", cats: ["landscaping", "pavers"],                               alt: "Front-yard rock bed with columnar trees and a stone retaining wall" },
+  { file: "IMG_0165 1.png", cats: ["landscaping"],                                         alt: "Low-water rock landscaping with young trees and shrubs" },
+  { file: "IMG_0167 1.png", cats: ["landscaping", "pavers"],                               alt: "Herringbone paver walkway with dark rock planting beds at an entry" },
+  { file: "IMG_0172 1.png", cats: ["landscaping", "pavers"],                               alt: "Paver pool deck with a stone seat wall and fresh sod" },
+  { file: "IMG_0181 1.png", cats: ["landscaping", "pavers"],                               alt: "Herringbone paver patio edged in stone beside a pond" },
+  { file: "IMG_0193 1.png", cats: ["landscaping", "pavers"],                               alt: "Herringbone paver entry path with lawn and planting beds" },
+  { file: "IMG_0210 2.png", cats: ["pavers"],                               alt: "Curved paver patio with a stone bench-wall and landscape lighting" },
+  { file: "IMG_0211 2.png", cats: ["pavers", "firepits"],                   alt: "Paver patio with a carved-stone fire feature set on a circular inlay" },
+  { file: "IMG_0212 2.png", cats: ["pavers", "firepits"],                   alt: "Carved-stone fire feature centered on a new paver patio" },
+  { file: "IMG_0213 1.png", cats: ["landscaping", "pavers"],                               alt: "Raised paver patio on a stone-veneer retaining wall with steps" },
+  { file: "IMG_0219 1.png", cats: ["landscaping", "pavers"],                               alt: "Paver driveway with a boulder retaining wall and stone steps" },
+  { file: "IMG_0226 1.png", cats: ["landscaping", "pavers"],                               alt: "Paver patio framed by natural boulders and sandstone steps" },
+  { file: "IMG_0231 1.png", cats: ["landscaping", "pavers"],                      alt: "Paver driveway with a bubbling-rock water feature in the island" },
+  { file: "IMG_0251 1.png", cats: ["landscaping", "water"],                                alt: "Pondless rock waterfall with flowering plants at a driveway entrance" },
+  { file: "IMG_0253 1.png", cats: ["landscaping", "pavers", "firepits"],                   alt: "Paver patio with a round stone fire pit and a curved seat wall" },
+  { file: "IMG_0261 1.png", cats: ["landscaping", "pavers", "firepits"],                   alt: "Square stone fire pit on a paver patio with boulder walls and steps" },
+  { file: "IMG_0264 1.png", cats: ["water"],                                alt: "Large boulder waterfall feature cascading into a pond" },
+  { file: "IMG_0267 1.png", cats: ["landscaping", "pavers", "firepits"],                   alt: "Circular paver patio with a round stone fire pit and seat wall" },
+  { file: "IMG_0270 1.png", cats: ["landscaping", "pavers"],                               alt: "Paver pool deck with a lit stone retaining wall at dusk" },
+  { file: "IMG_0283 1.png", cats: ["water"],                                alt: "Basalt-column fountains bubbling over a bed of river rock" },
+];
+
+// Existing repo image used as a graceful fallback until the real photos are
+// added to /public/img. Remove the onerror on the <img> once they exist.
+const fallback = "project1-greencountry.webp";
+---
+
+<section class="bg-white px-4 md:px-12 py-14 md:py-20" aria-labelledby="portfolio-heading">
+  <div class="max-w-6xl mx-auto" data-portfolio>
+
+    <!-- Heading -->
+    <div class="max-w-3xl mb-8" data-aos="fade-up">
+      <p class="text-[#0d542b] font-bold tracking-widest uppercase text-sm">
+        Our work
+      </p>
+      <h2 id="portfolio-heading" class="mt-2 text-2xl md:text-4xl font-bold text-stone-800">
+        Residential design &amp; installation portfolio
+      </h2>
+      <p class="mt-3 text-stone-600 leading-relaxed">
+        A look at recent hardscape and landscape projects across the Treasure Valley.
+        Use the filters to browse by type, and tap any photo to enlarge it.
+      </p>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="flex flex-wrap items-center gap-2.5 mb-8" role="group" aria-label="Filter portfolio by category" data-aos="fade-up">
+      {categories.map((c) => (
+        <button
+          type="button"
+          data-filter={c.slug}
+          aria-pressed={c.slug === "all" ? "true" : "false"}
+          class="gc-filter rounded-full px-4 py-2 text-sm font-semibold border transition
+                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]"
+        >
+          {c.label}
+        </button>
+      ))}
+      <span data-count class="ml-auto text-sm text-stone-500 hidden sm:inline"></span>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4" data-grid>
+      {projects.map((p) => (
+        <button
+          type="button"
+          data-cats={p.cats.join(" ")}
+          data-full={`/img/${p.file}`}
+          data-alt={p.alt}
+          aria-label={`Enlarge photo: ${p.alt}`}
+          class="gc-tile group relative block overflow-hidden rounded-xl bg-stone-200 aspect-[4/3]
+                 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]"
+        >
+          <img
+            src={`/img/${p.file}`}
+            alt={p.alt}
+            loading="lazy"
+            onerror={`this.onerror=null;this.src='/img/${fallback}'`}
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+          <span class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+        </button>
+      ))}
+    </div>
+
+    <!-- Empty state (shown only if a filter matches nothing) -->
+    <p data-empty class="hidden text-center text-stone-500 py-12">
+      No projects in this category yet.
+    </p>
+
+  </div>
+</section>
+
+<style>
+  /* Subtle fade-in re-triggered on each filter change (kept separate from AOS,
+     which only runs on scroll-in for the heading/filter bar above). */
+  .gc-tile { animation: gcTileIn 0.35s ease both; }
+  @keyframes gcTileIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gc-tile { animation: none; }
+  }
+</style>
+
+<script>
+  // GLightbox is loaded globally by MainLayout; declare it for TS.
+  declare var GLightbox: any;
+
+  const root = document.querySelector("[data-portfolio]");
+  if (root) {
+    const tiles = Array.from(root.querySelectorAll<HTMLElement>("[data-cats]"));
+    const filterBtns = Array.from(root.querySelectorAll<HTMLElement>("[data-filter]"));
+    const countEl = root.querySelector<HTMLElement>("[data-count]");
+    const emptyEl = root.querySelector<HTMLElement>("[data-empty]");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const inactive =
+      "gc-filter rounded-full px-4 py-2 text-sm font-semibold border transition " +
+      "bg-white text-stone-600 border-stone-300 hover:border-[#0d542b] hover:text-[#0d542b] " +
+      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]";
+    const active =
+      "gc-filter rounded-full px-4 py-2 text-sm font-semibold border transition " +
+      "bg-[#0d542b] text-white border-[#0d542b] " +
+      "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0d542b]";
+
+    let lb: any = null;
+
+    const visibleTiles = () => tiles.filter((t) => !t.classList.contains("hidden"));
+
+    // Rebuild the lightbox so prev/next only walks the photos on screen.
+    function buildLightbox() {
+      const vis = visibleTiles();
+      vis.forEach((t, i) => (t.dataset.lbIndex = String(i)));
+      if (lb) lb.destroy();
+      if (typeof GLightbox === "undefined") return;
+      lb = GLightbox({
+        elements: vis.map((t) => ({ href: t.dataset.full, type: "image" })),
+        loop: true,
+        touchNavigation: true,
+        zoomable: true,
+      });
+    }
+
+    function applyFilter(slug: string) {
+      tiles.forEach((t) => {
+        const match = slug === "all" || (t.dataset.cats || "").split(" ").includes(slug);
+        t.classList.toggle("hidden", !match);
+        if (match && !reduceMotion) {
+          // restart the fade-in for tiles entering view
+          t.style.animation = "none";
+          void t.offsetWidth;
+          t.style.animation = "";
+        }
+      });
+
+      filterBtns.forEach((b) => {
+        const on = b.dataset.filter === slug;
+        b.className = on ? active : inactive;
+        b.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+
+      const n = visibleTiles().length;
+      if (countEl) countEl.textContent = `${n} project${n === 1 ? "" : "s"}`;
+      if (emptyEl) emptyEl.classList.toggle("hidden", n > 0);
+
+      buildLightbox();
+    }
+
+    // Open the lightbox at the clicked tile's position within the visible set.
+    tiles.forEach((t) => {
+      t.addEventListener("click", () => {
+        if (lb && t.dataset.lbIndex !== undefined) lb.openAt(Number(t.dataset.lbIndex));
+      });
+    });
+
+    filterBtns.forEach((b) =>
+      b.addEventListener("click", () => applyFilter(b.dataset.filter || "all"))
+    );
+
+    // Wait for the global GLightbox script to be ready, then show everything.
+    (function init(tries = 0) {
+      if (typeof GLightbox === "undefined" && tries < 40) {
+        return void setTimeout(() => init(tries + 1), 50);
+      }
+      applyFilter("all");
+    })();
+  }
+</script>
